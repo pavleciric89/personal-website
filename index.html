@@ -375,12 +375,14 @@
                 type="text"
                 placeholder="Name"
                 class="contact__input"
+                required
               />
               <input
                 name="email"
                 type="mail"
                 placeholder="Email"
                 class="contact__input"
+                required
               />
             </div>
             <input
@@ -388,6 +390,7 @@
               type="text"
               placeholder="Project/Company"
               class="contact__input"
+              required
             />
             <textarea
               name="message"
@@ -395,9 +398,10 @@
               rows="10"
               placeholder="Message"
               class="contact__input"
+              required
             ></textarea>
+            <div data-netlify-recaptcha="true"></div>
             <input type="submit" value="Send" class="button contact__button" />
-            <div class="data-netlify-recaptcha"></div>
           </form>
           <div class="contact__inputs contact__my-info">
             <div class="contact__info">
