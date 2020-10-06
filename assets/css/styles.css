@@ -95,7 +95,52 @@ img {
   height: auto;
   display: block;
 }
+/* loader */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "overlap";
+  background-color: var(--first-color-darken);
+  height: 100vh;
+  width: 100%;
+}
+.spinner__loader {
+  grid-area: overlap;
+  align-self: center;
+  justify-self: center;
+  background-color: initial;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid var(--first-color);
+  border-top-color: var(--first-color-dark);
+  animation: 1s spin infinite ease-in-out;
+}
+.loader__logo {
+  grid-area: overlap;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 15px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fade-in {
+  animation: fadeIn 3s;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 /* class css */
 
 .section {
@@ -593,10 +638,11 @@ img {
   }
 }
 @media screen and (min-width: 1024px) {
-  body {
+  .body {
     margin: 0;
-    padding-left: var(--nav-width);
+    /* padding-left: var(--nav-width); */
   }
+
   .l-header {
     width: 0;
   }
@@ -607,6 +653,7 @@ img {
   }
   .nav__menu {
     left: 0;
+    display: none;
   }
   .home__container {
     height: 100vh;

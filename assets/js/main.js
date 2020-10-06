@@ -35,3 +35,14 @@ function scrollActive() {
         }
     })
 }
+let spinnerWrapper = document.querySelector('.wrapper');
+let body = document.querySelector(".body");
+let nav = document.querySelector('.nav__menu');
+window.addEventListener('load', () => {
+    spinnerWrapper.style.display = 'none';
+    nav.style.display = 'unset';
+    if (window.innerWidth > 1024) {
+        body.style.paddingLeft = "324px";
+    }
+    body.classList.add('fade-in');
+});
