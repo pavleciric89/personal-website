@@ -37,12 +37,14 @@ function scrollActive() {
 }
 let spinnerWrapper = document.querySelector('.wrapper');
 let body = document.querySelector(".body");
-let nav = document.querySelector('.nav__menu');
+let navHeader = document.querySelector('.l-header');
 window.addEventListener('load', () => {
     spinnerWrapper.style.display = 'none';
-    nav.style.display = 'unset';
+    navMenu.style.display = 'flex';
+    navHeader.style.display = 'grid';
     if (window.innerWidth > 1024) {
         body.style.paddingLeft = "324px";
     }
     body.classList.add('fade-in');
 });
+console.log(window.innerWidth);
