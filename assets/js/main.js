@@ -42,9 +42,17 @@ window.addEventListener('load', () => {
     spinnerWrapper.style.display = 'none';
     navMenu.style.display = 'flex';
     navHeader.style.display = 'grid';
+
     if (window.innerWidth > 1024) {
         body.style.paddingLeft = "324px";
     }
     body.classList.add('fade-in');
 });
-console.log(window.innerWidth);
+const mediaQuery = window.matchMedia('(min-width: 1024)');
+function handleScreenChange(e) {
+    if (e.matches) {
+        body.style.paddingLeft = "324px";
+    }
+}
+mediaQuery.addListener(handleScreenChange);
+handleScreenChange(mediaQuery);
